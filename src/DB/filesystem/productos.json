@@ -1,0 +1,42 @@
+[
+  {
+    "nombre": "Cerveza ipa",
+    "descripcion": "ibu fuerte",
+    "codigo": "0000001",
+    "foto": "https://firebasestorage.googleapis.com/v0/b/beerscript-ebe0f.appspot.com/o/andes%20ipa.jpg?alt=media&token=dc05d263-b038-4322-977b-0ce265c8a64d",
+    "precio": 400,
+    "stock": 20,
+    "id": 1,
+    "timestamp": "10/7/2022 22:56:10"
+  },
+  {
+    "nombre": "Cerveza red",
+    "descripcion": "ibu intermedio",
+    "codigo": "0000002",
+    "foto": "https://firebasestorage.googleapis.com/v0/b/beerscript-ebe0f.appspot.com/o/andes%20roja.jpg?alt=media&token=432f65f2-27ad-4893-8dee-235637b262ed",
+    "precio": 350,
+    "stock": 20,
+    "id": 2,
+    "timestamp": "10/7/2022 22:56:10"
+  },
+  {
+    "nombre": "Cerveza black",
+    "descripcion": "sabor tostado",
+    "codigo": "0000003",
+    "foto": "https://firebasestorage.googleapis.com/v0/b/beerscript-ebe0f.appspot.com/o/andes%20black.jpg?alt=media&token=5cebb2c4-4157-4194-ad48-cc4659df3243",
+    "precio": 400,
+    "stock": 20,
+    "id": 3,
+    "timestamp": "10/7/2022 22:56:10"
+  },
+  {
+    "nombre": "Cerveza ipa red",
+    "descripcion": "ibu elevado",
+    "codigo": "0000004",
+    "foto": "https://firebasestorage.googleapis.com/v0/b/beerscript-ebe0f.appspot.com/o/andes%20ipa%20red.jpg?alt=media&token=6789fedb-cc87-4cb5-96f7-8fcab0fb32b2",
+    "precio": 400,
+    "stock": 20,
+    "id": 4,
+    "timestamp": "10/7/2022 22:56:10"
+  }
+]

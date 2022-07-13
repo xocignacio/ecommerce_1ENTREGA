@@ -1,0 +1,32 @@
+
+<div class="card">
+    <h3 class="animate__animated animate__heartBeat"  style="color:  white">Lista de Productos</h3> 
+    {{#if products.length}}
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th></th>
+            <th></th>
+            <th><a id="getProductsBtn" href="http://localhost:8081/api/productos">api/productos</a></th>
+            
+        </tr>
+        {{#each products}}
+        <tr>
+            <td>{{this.nombre}}</td>
+            <td>${{this.precio}}</td>
+            <td>{{this.stock}}</td>
+            <td><img width="50" src={{this.foto}} alt="image"></td>
+            <td> <button onclick="alert('SOY UN BOTON ROTO');"> - </button> <span>0</span>   <button onclick="alert('SOY UN BOTON ROTO');"> + </button>  </td>
+         <td> <button onclick="alert('SOY UN BOTON ROTO');" id="getProductsBtn" > agregar </button> </td>
+         <td>  </td>
+        </tr>
+        {{/each}}
+    </table>
+    {{else}}
+    <div>
+        No hay productos
+    </div>
+    {{/if}}
+</div>
