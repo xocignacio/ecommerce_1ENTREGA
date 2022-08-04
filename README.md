@@ -1,5 +1,5 @@
 # Ecommerce backend
-## Primer entrega 
+## Primer entrega y Segunda entrega
 
 
 Este proyecto es un ecommerce trabajado especialmente desde el backend
@@ -8,6 +8,8 @@ Este proyecto es un ecommerce trabajado especialmente desde el backend
 - Utiliza api resful 
 - motores de plantilla
 - web Socket
+- Moongose
+- MongoDB y firebase
 
 
 
@@ -19,6 +21,7 @@ npm install -g nodemon => Nodemon
 npm install express => Express 
 npm init -y && npm install express socket.io => Proyecto con node, express y sockets
 npm install dotenv --save  => cargar las variables de entorno
+npm i mongoose => Utilizacion de schemas
 
 ```
 ## Framework
