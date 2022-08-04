@@ -1,3 +1,4 @@
+
 import express from "express";
 import { config } from "./config/index.js";
 import { productsRouter, cartsRouter } from "./routers/index.js";
@@ -17,3 +18,5 @@ const server = app.listen(config.server.PORT, () => {
 server.on("error", (error) => {
   console.error(`Server error: ${error}`);
 });
+
+ 
