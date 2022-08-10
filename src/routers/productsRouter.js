@@ -1,13 +1,15 @@
 import { Router } from "express";
 import { FilesystemContainer } from "../Api/FilesystemContainer.js";
-import { config } from "../config/index.js";
+/* import { config } from '../config.index.js' */
 import { isAdmin } from "../middlewares/index.js";
 import { ERRORS_UTILS, JOI_VALIDATOR } from "../utils/index.js";
+import {productoDao} from '../daos/index.js'
 
 const productsRouter = Router();
 
-const ProductApi = new FilesystemContainer(config.FILESYSTEM_DB.products);
 
+const ProductApi = new productoDao ;    
+                /* new FilesystemContainer(config.FILESYSTEM_DB.products); */
 productsRouter.get("/", async (req, res) => {
   try {
     const products = await ProductApi.getAll();

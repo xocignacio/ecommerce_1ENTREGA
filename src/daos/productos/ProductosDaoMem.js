@@ -1,8 +1,10 @@
-import MemoryContainer from '../../Api/MemoryContainer'
-import ProdModel from '../../Models/prods.js'
+import { MemoryContainer } from '../../Api/MemoryContainer.js';
+import {ProdModel} from '../../Models/prods.js'
 
-export class prodMongoDB extends  MemoryContainer {
+class prodMemory extends  MemoryContainer {
     constructor() {
-        super('prods', ProdModel)
+        super({collection: "prods", schema: ProdModel})
     }
 }
+
+export { prodMemory };

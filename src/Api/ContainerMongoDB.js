@@ -1,42 +1,25 @@
 import mongoose from "mongoose";
-const {model} = mongoose
-
-const conexionMongoDB = () => {
-    const URL = "mongodb://localhost:27017/ecommerce";
-    let rta = await mongoose.connect(URL, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
-    console.log("DB Connected :)");
-}
 
 class ContainerMongoDB {
-    constructor (collection, schema){
-      this.collection = mongoose.model(collection, schema)
+    constructor ({collection, schema}){
+      this.collection = mongoose.model(collection, schema);
     }
  
     async getAll() {
       try {
-        const file = await fs.promises.readFile(this.path);
-        return JSON.parse(file);
+       const response = await this.collection.find({})
+        return response;
+      
       } catch (error) {
-        await fs.promises.writeFile(this.path, JSON.stringify([]));
-        return [];
+        return error;
       }
     }
   
     async save(element) {
       try {
-        const elements = await this.getAll();
-        element.id =
-          elements.length === 0 ? 1 : elements[elements.length - 1].id + 1;
-  
-        element.timestamp = DATE_UTILS.getTimestamp();
-  
-        elements.push(element);
-        await fs.promises.writeFile(this.path, JSON.stringify(elements, null, 2));
-  
-        return element;
+        const response = await this.collection.create(element);  
+        return response;
+      
       } catch (error) {
         return error;
       }
@@ -44,10 +27,10 @@ class ContainerMongoDB {
   
     async getById(id) {
       try {
-        const elements = await this.getAll();
-        const element = elements.find((e) => e.id == id);
-  
-        return element;
+       const response = await this.collection.findById(id);
+       return response;
+         
+       
       } catch (error) {
         return error;
       }
@@ -55,17 +38,10 @@ class ContainerMongoDB {
   
     async updateById(id, newData) {
       try {
-        const elements = await this.getAll();
-  
-        const elementIndex = elements.findIndex((e) => e.id == id);
-  
-        if (elementIndex === -1) return { error: "Elemento no encontrado" };
-  
-        elements[elementIndex] = { ...elements[elementIndex], ...newData };
-  
-        await fs.promises.writeFile(this.path, JSON.stringify(elements, null, 3));
-  
-        return elements[elementIndex];
+        const response = await this.collection.findByIdAndUpdate(id, newData, {
+        new:true, });
+        return response;
+      
       } catch (error) {
         return error;
       }
@@ -73,26 +49,16 @@ class ContainerMongoDB {
   
     async deleteById(id) {
       try {
-        const elements = await this.getAll();
+       const response = await this.collection.findByIdAndDelete(id);
+       return response
   
-        const elementIndex = elements.findIndex((e) => e.id == id);
-  
-        if (elementIndex === -1) return { error: "Elemento no encontrado" };
-  
-        const newElements = elements.filter((e) => e.id != id);
-  
-        await fs.promises.writeFile(
-          this.path,
-          JSON.stringify(newElements, null, 3)
-        );
-  
-        return elements;
+       
       } catch (error) {
-        return elements;
+        return error;
       }
     }
 
 }
 
-export default ContainerMongoDB;
+export {ContainerMongoDB};
 

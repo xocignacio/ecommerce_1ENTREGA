@@ -1,8 +1,10 @@
-import ContenedorMongoDB from '../ruta/contenedor/ContenedorMongoDB.js'
-import cartModel from '../../Models/carts.js'
+import { ContainerMongoDB } from '../../Api/ContainerMongoDB.js'
+import {cartModel} from '../../Models/carts.js' 
 
-export class cartsMongoDB extends ContenedorMongoDB {
+class cartsMongoDB extends ContainerMongoDB {
     constructor() {
-        super('carts', cartModel)
+        super({collection: "carts", schema: cartModel})
     }
 }
+
+export { cartsMongoDB };

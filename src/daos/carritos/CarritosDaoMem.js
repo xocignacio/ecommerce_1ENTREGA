@@ -1,8 +1,10 @@
-import MemoryContainer from '../../Api/MemoryContainer'
-import cartModel from '../../Models/carts.js'
+import { MemoryContainer } from '../../Api/MemoryContainer.js';
+import {cartModel} from '../../Models/carts.js'
 
-export class cartsMongoDB extends  MemoryContainer {
+class cartsMemory extends  MemoryContainer {
     constructor() {
         super('carts', cartModel)
     }
 }
+
+export {cartsMemory};

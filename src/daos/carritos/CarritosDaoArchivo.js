@@ -1,8 +1,10 @@
 import { FilesystemContainer } from '../../Api/FilesystemContainer.js'
-import cartModel from '../../Models/carts.js'
+import {cartModel} from '../../Models/carts.js'
 
-export class cartsMongoDB extends   FilesystemContainer {
+class CartFiles extends   FilesystemContainer {
     constructor() {
         super('carts', cartModel)
     }
 }
+
+export {CartFiles};

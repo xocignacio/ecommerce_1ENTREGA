@@ -1,8 +1,10 @@
-import ContenedorMongoDB from '../ruta/contenedor/ContenedorMongoDB.js'
-import ProdModel from '../../Models/prods.js'
+import { ContainerMongoDB } from '../../Api/ContainerMongoDB.js';
+import {ProdModel} from '../../Models/prods.js'
 
-export class prodMongoDB extends ContenedorMongoDB {
+class prodMongoDB extends ContainerMongoDB {             ///// Clase hija/derivada de ContainerMongoDB, por eso puedo acceder a todos los metodos del container hasta crear nueva aca
     constructor() {
-        super('prods', ProdModel)
+        super({collection: "prods", schema: ProdModel})
     }
 }
+
+export {prodMongoDB};

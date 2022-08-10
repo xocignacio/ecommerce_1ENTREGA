@@ -1,0 +1,27 @@
+VARIABLES DE ENTORNO
+en .env tenemos el selected db (que base de datos voy a utilizar), coneccion de la url de mongo, informacion que no es publica
+.env encuentro las variables de entorno (cosas en privado, como apis key)
+para utilizarlo tengo que tener descargado "dotenv" , y en el archivo que quiero suarlo tengo que hacer 2 lineas de codigo:
+import dotenv from "dotenv"
+dotenv.config();
+entonces en un config/index.js tengo 
+mongo_db: { 
+URL:process.env.MONGO_URL,
+DB_NAME: process.env.MONGO_DB_NAME,
+}
+
+los proces.env siempre los tengo en un solo archivo (config), tengo todo lo importante en 1 solo archivo centralizando todo
+
+DAO
+Recibe un dato y lo guarda en una base de datos, no tiene mucha logica
+
+en index agregar el mongoDBservice.init () /// conexion 
+
+La carpeta dao se divide en productos y carritos, dentro tengo clases extendidas de container y un index con todos los export de las clases extendida
+para poder usarlo en el index de dao (funcionan como indices) para luego en el index de dao importar todo lo que necesito desde un solo archivo
+
+EN SERVICE/MongoDBService creo la funcion que me conecta con el servidor de mongoDB (.init) 
+
+levantar server mongoDB local 
+1 -Abrir consola ejecutar mongod --dbpath + el path de la carpeta que vas a usar db 
+2- Abrimos una nueva terminal y ejecutamon mongo y sobre esta consola ejecutamos todos los comandos de la base de datos
