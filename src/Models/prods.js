@@ -23,7 +23,6 @@ prodsSchema.set("toJSON", {                /* Es como un middleware */
  },
 });
 
-
 const ProdModel = model(prodsCollection, prodsSchema);
 
 export { ProdModel, prodsSchema}  ///// el Model es muy importante! a este molde lo uso para crear, eliminar etcs
