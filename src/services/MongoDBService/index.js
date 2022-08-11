@@ -19,4 +19,4 @@ const MongoDBService = {
     init,
 };
 
-export {MongoDBService}; // Objeto con funcion de conexion a mongo(MongoDBService.init) esto lo utilizo en el src/index.js, cuando lo ejecuto 
+export {MongoDBService}; // Objeto con funcion de conexion a mongo(MongoDBService.init) esto lo utilizo en el src/index.js cuando lo ejecuto 
