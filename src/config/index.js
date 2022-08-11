@@ -4,7 +4,7 @@ dotenv.config();
 const DEV_PORT = 8080;
 
 const DBS = {
-  mongo: "mongoDB",
+  mongo: "mongo",
   Filesystem: "filesystem",
   memory: "memory"
 }
