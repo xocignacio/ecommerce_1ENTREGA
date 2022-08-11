@@ -8,7 +8,7 @@ import {productoDao} from '../daos/index.js'
 const productsRouter = Router();
 
 
-const ProductApi = new productoDao ;    
+const ProductApi = productoDao ;    
                 /* new FilesystemContainer(config.FILESYSTEM_DB.products); */
 productsRouter.get("/", async (req, res) => {
   try {
