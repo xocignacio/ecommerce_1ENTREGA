@@ -9,7 +9,7 @@ const init = async () =>{
         useNewUrlParser: true,
         useUnifiedTopology: true,
        });
-       console.log ("Se pudo establecer la conexion con mongoDB");
+       console.log ("- Se pudo establecer la conexion con mongo atlas ✔" );
     } catch (error) {
         console.error(error);
     }

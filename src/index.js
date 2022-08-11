@@ -1,7 +1,7 @@
 import express from "express";
 import { config } from "./config/index.js";
 import { productsRouter, cartsRouter } from "./routers/index.js";
-import {MongoDBService} from './services/MongoDBService/index.js'
+import {MongoDBService} from './services/MongoDBService/index.js';
 
 /* PARA PROBAR SI FUNCIONA EL CONTAINER MONGO CONSUMIENDO UN METODO 
 import {ContainerMongoDB} from './Api/ContainerMongoDB.js'
@@ -24,7 +24,7 @@ app.use(config.server.routes.carts, cartsRouter);
 
 
 const server = app.listen(config.server.PORT, () => {
-  console.log(`Server running on port  => ${server.address().port}`);
+  console.log(`- Server running on port  => ${server.address().port} ✔ `);
 });
 server.on("error", (error) => {
   console.error(`Server error: ${error}`);
