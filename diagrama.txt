@@ -25,3 +25,4 @@ EN SERVICE/MongoDBService creo la funcion que me conecta con el servidor de mong
 levantar server mongoDB local 
 1 -Abrir consola ejecutar mongod --dbpath + el path de la carpeta que vas a usar db 
 2- Abrimos una nueva terminal y ejecutamon mongo y sobre esta consola ejecutamos todos los comandos de la base de datos
+(pwd me dice la ruta en la que estoy parado)
