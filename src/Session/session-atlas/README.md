@@ -1,1 +1,1 @@
-# correr proyecto => node src/session/session-atlas/app.js
+# correr proyecto =>  src/session/session-atlas/app.js
